@@ -105,7 +105,7 @@ function createHeader() {
 }
 
 function createFooter() {
-  let exploreHTML  "";
+  let exploreHTML = "";
   footerExploreLinks.forEach(function (link) {
     exploreHTML += '<a href="' + link.href + '">' + link.label + "</a>";
   });
