@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Bella-cucina</title>
+  <link rel="stylesheet" href="../style/reset.css">
+  <link rel="stylesheet" href="../style/general.css">
+  <link rel="stylesheet" href="../style/responsive.css">
+  <link rel="stylesheet" href="../style/admin.css">
+</head>
+
+<body>
+
+  <!-- Header is injected by js/layout.js -->
+  <div id="site-header"></div>
+
+  <section class="section">
+    <p class="section-label text-center">Staff Only</p>
+    <h1 class="section-title text-center">Admin Dashboard</h1>
+    <p class="section-text text-center" style="margin: 0 auto 30px;">
+      View every reservation and manage the kitchen's Time-to-Table Tracker.
+    </p>
+
+    <!-- ===== LOGIN GATE =====
+         Nothing below this box is visible until the correct staff
+         password is entered. See js/admin.js.
+         NOTE: this is a client-side demo password, not real
+         security -- see the comments in js/admin.js. -->
+    <div id="admin-login-box" class="login-box" style="max-width: 400px; margin: 0 auto;">
+      <p id="admin-login-message" class="form-message"></p>
+
+      <div class="form-group">
+        <label for="admin-password">Staff Password</label>
+        <input type="password" id="admin-password" placeholder="Enter staff password">
+      </div>
+
+      <button id="admin-login-btn" class="btn login-btn">Login</button>
+    </div>
+
+    <!-- ===== DASHBOARD (hidden until login) ===== -->
+    <div id="admin-dashboard" style="display: none;">
+
+      <div class="dashboard-header">
+        <span class="staff-badge">Staff Mode</span>
+        <button id="admin-logout-btn" class="btn btn-outline">Logout</button>
+      </div>
+
+      <!-- ===== Time-to-Table Tracker ===== -->
+      <div class="tracker-section" style="margin-top: 20px;">
+        <h2>Time-to-Table Tracker</h2>
+        <p>Update the current stage of the kitchen's active order. Customers see this update on the Menu page.</p>
+
+        <div class="tracker-steps" id="admin-tracker-steps">
+          <div class="tracker-step">Order Received</div>
+          <div class="tracker-step">Kitchen Preparing</div>
+          <div class="tracker-step">Cooking</div>
+          <div class="tracker-step">Plating</div>
+          <div class="tracker-step">On the way</div>
+        </div>
+
+        <div class="tracker-info">
+          Estimated time: <span id="admin-tracker-time">0 min</span>
+        </div>
+
+        <div class="tracker-buttons">
+          <button id="admin-start-tracker" class="btn">Start Order Tracking</button>
+          <button id="admin-next-step" class="btn">Next Stage</button>
+        </div>
+      </div>
+
+      <!-- ===== All Reservations ===== -->
+      <div class="reservations-admin-section">
+        <div class="reservations-admin-header">
+          <h2>All Reservations</h2>
+          <button id="clear-reservations-btn" class="btn btn-outline">Clear All</button>
+        </div>
+
+        <p id="no-reservations-message" style="display: none;">
+          No reservations have been submitted yet.
+        </p>
+
+        <div class="table-scroll">
+          <table id="reservations-table" class="reservations-table">
+            <thead>
+              <tr>
+                <th>Submitted</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Reserving</th>
+                <th>Food Pre-order</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Guests</th>
+              </tr>
+            </thead>
+            <!-- Rows are built automatically by js/admin.js from
+                 whatever is saved in localStorage. -->
+            <tbody id="reservations-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer is injected by js/layout.js -->
+  <div id="site-footer"></div>
+
+  <script src="../js/layout.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+
+</html>

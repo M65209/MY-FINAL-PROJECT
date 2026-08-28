@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Bella-cucina</title>
+  <link rel="stylesheet" href="../style/reset.css">
+  <link rel="stylesheet" href="../style/general.css">
+  <link rel="stylesheet" href="../style/responsive.css">
+  <link rel="stylesheet" href="../style/login.css">
+</head>
+
+<body>
+
+  <!-- Header is injected by js/layout.js -->
+  <div id="site-header"></div>
+
+  <section class="section">
+    <p class="section-label text-center">Welcome!!!</p>
+    <h1 class="section-title text-center">Login to Your Account</h1>
+    <p class="section-text text-center" style="margin: 0 auto 30px;">
+      Sign in to manage your reservations and enjoy a faster booking experience.
+    </p>
+
+    <div class="login-box">
+
+      <!-- This is where error or success messages will show up -->
+      <p id="form-message" class="form-message"></p>
+
+      <form id="login-form">
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" id="remember">
+            Remember me
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn login-btn">Login</button>
+
+      </form>
+
+      <p class="signup-text">
+        Don't have an account? <a href="#">Sign up</a>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Footer is injected by js/layout.js -->
+  <div id="site-footer"></div>
+
+  <script src="../js/layout.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+
+</html>

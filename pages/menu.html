@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Bella-cucina</title>
+  <link rel="stylesheet" href="../style/reset.css">
+  <link rel="stylesheet" href="../style/general.css">
+  <link rel="stylesheet" href="../style/responsive.css">
+</head>
+
+<body>
+
+  <!-- Header is injected by js/layout.js -->
+  <div id="site-header"></div>
+
+  <section class="section">
+    <p class="section-label text-center">Culinary Selection</p>
+    <h1 class="section-title text-center">A curated journey through seasonal flavors</h1>
+    <p class="section-text text-center" style="margin: 0 auto 30px;">Crafted with precision and passion by Executive
+      Chef Julian Lele.</p>
+
+    <!-- BLIND BOX -->
+    <div class="blind-box-section">
+      <h2>Blind Box Menu</h2>
+      <p>Feeling adventurous? Let the chef choose a surprise dish for you.</p>
+      <button id="blind-box-btn">Open Blind Box</button>
+      <div id="blind-box-result"></div>
+    </div>
+
+    <!-- TIME-TO-TABLE TRACKER -->
+    <div class="tracker-section">
+      <h2>Time-to-Table Tracker</h2>
+      <p>Track your order from kitchen to table in real time.</p>
+
+      <div class="tracker-steps">
+        <div class="tracker-step active">Order Received</div>
+        <div class="tracker-step">Kitchen Preparing</div>
+        <div class="tracker-step">Cooking</div>
+        <div class="tracker-step">Plating</div>
+        <div class="tracker-step">On the way</div>
+      </div>
+
+      <div class="tracker-info">
+        Estimated time: <span id="tracker-time">0 min</span>
+      </div>
+
+      <p class="tracker-staff-note text-center">
+        Staff/Manager? Update this tracker from the
+        <a href="admin.html">Admin Dashboard</a>.
+      </p>
+    </div>
+
+    <div class="menu-tabs" id="menu-tabs"></div>
+
+    <div id="menu-container"></div>
+
+  </section>
+
+  <!-- 3D / AR Modal -->
+  <div class="dish-modal" id="dish-modal">
+    <div class="modal-content">
+      <button id="close-modal">×</button>
+      <h3 id="modal-title">Dish Preview</h3>
+      <img id="modal-img" src="images/Ekwang.jpg" alt="Ekwang">
+      <button id="rotate-btn" class="btn">Rotate 3D</button>
+      <p class="ar-note">3D preview mode. On a real AR device this would use your camera to place the dish on the
+        table.
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer is injected by js/layout.js -->
+  <div id="site-footer"></div>
+
+  <script src="../js/layout.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/features.js"></script>
+  <script src="../js/tracker-view.js"></script>
+</body>
+
+</html>

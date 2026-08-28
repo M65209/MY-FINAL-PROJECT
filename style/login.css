@@ -1,0 +1,62 @@
+/* ===== Login Page Styles ===== */
+
+/* The card that holds the login form */
+.login-box {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 35px 30px;
+}
+
+/* Reuse the same spacing as the reservation form's .form-group,
+   but give a little more room between fields */
+.login-box .form-group {
+  margin-bottom: 18px;
+}
+
+/* Row with "Remember me" and "Forgot password?" */
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: var(--light);
+}
+
+.form-options a:hover {
+  color: var(--gold);
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.remember-me input {
+  cursor: pointer;
+}
+
+/* Make the login button fill the card, like the reserve form button */
+.login-btn {
+  width: 100%;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+/* Text under the form linking to sign up */
+.signup-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--light);
+}
+
+.signup-text a:hover {
+  color: var(--gold);
+}
