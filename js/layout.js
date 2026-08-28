@@ -105,7 +105,7 @@ function createHeader() {
 }
 
 function createFooter() {
-  let exploreHTML = "";
+  let exploreHTML  "";
   footerExploreLinks.forEach(function (link) {
     exploreHTML += '<a href="' + link.href + '">' + link.label + "</a>";
   });
@@ -134,7 +134,7 @@ function createFooter() {
     "</div>" +
     "</div>" +
     '<div class="footer-bottom">' +
-    "&copy; 2026 Restaurant Lelebotte. All rights reserved. &middot; " +
+    "&copy; 2026 Bella-cucina. All rights reserved. &middot; " +
     '<a href="' +
     pagesPath +
     'admin.html">Staff Login</a>' +
