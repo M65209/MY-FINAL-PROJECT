@@ -1,6 +1,5 @@
 
-
-Live demo: https://resto-rant.netlify.app/
+https://bell-cucina.netlify.app/
 
 ## Project structure
 
